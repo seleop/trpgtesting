@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-transform: translateZ(0);
+}
+
+body {
+    background-color: #1f2334;
+    overflow-x: hidden;
+    min-height: 400vh;
+}
+
+.container {
+    width: 100vw;
+    height: 400vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.light-sky {
+    width: 100%;
+    height: 3000px;
+    background: rgb(255,127,35);
+    background: radial-gradient(circle, rgba(255,127,35,1) 0%, rgba(255,240,121,1) 29%, rgba(255,241,192,1) 59%, rgba(217,255,255,1) 100%);
+    z-index: -5;
+    position: absolute;
+}
+
+/* ----------------------------------------------------------- */
+.hello {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    top: 9%;
+    font-size: 3em;
+    text-shadow: 0px 0px 10px #5c5c5cc4;
+    animation : welcometexthide .7s 1s 1 forwards;
+    z-index: 10;
+}
+
+.scrollment {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 9%;
+    font-size: 2em;
+    text-shadow: 0px 0px 10px #5c5c5cc4;
+    animation: welcomebig 3s 4.6s ease-out infinite;
+}
+
+.downarrow i {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    top: 560px;
+    font-size: 4em;
+    text-shadow: 0px 0px 30px #b4b4b473;
+    animation: downarrowmove 3s 1s ease-in infinite;
+}
+
+
+.midmsg {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0px 3px 5px #424242f8;
+    z-index: 100;
+}
+
+.midmsg1 {
+    top: 40%;
+    left: 25%;
+    font-size: 0.8em;
+}
+
+.midmsg2 {
+    top: 58%;
+    right: 20%;
+    font-size: 0.9em;
+}
+
+.enterbtn {
+    width: 180px;
+    height: 60px;
+    margin: 0 45%;
+    background-color: #fff;
+    border: 1px solid #000;
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: 0px 0px 10px #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.enterbtn a {
+    text-decoration: none;
+    color: #585858;
+    font-size: 0.7em;
+}
+/* animation =================================================== */
+
+.backgroundimages img {
+    position: absolute;
+    height: auto;
+    object-fit: cover;
+}
+
+
+#mountain1 {
+    width: 100%;
+    z-index: -1;
+}
+
+#mountain2 {
+    width: 100%;
+    min-height: 90%;
+    bottom: 0;
+    z-index: 1;
+}
+
+#forest1 {
+    width: 100%;
+    min-height: 90%;
+    bottom: 0%;
+    z-index: 2;
+}
+
+#mountain3 {
+    width: 100%;
+    bottom: -18%;
+    z-index: 3;
+}
+
+#mountain4 {
+    width: 100%;
+    bottom: -22%;
+    z-index: 4;
+}
+#flat1 {
+    width: 100%;
+    bottom: 0%;
+    z-index: 6;
+}
+
+#flat2 {
+    width: 100%;
+    bottom: -5%;
+    z-index: 5;
+}
+
+
+#bat1 {
+    width: 6%;
+    bottom: 0%;
+    left: 20%;
+    z-index: 4;
+}
+#bird1 {
+    width: 3%;
+    top: 6%;
+    right: 30%;
+}
+
+#flight-dragon {
+    width: 160px;
+    top: 5%;
+    left: 35%;
+}
+
+/* animation ------------------------------------------------------ */
+@keyframes welcometexthide {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes downarrowmove {
+    0% {transform: translateY(0%);
+    opacity: 1;}
+    15% {transform: translateY(-30px);
+    opacity: 0;}
+    30% {transform: translateY(30px);
+    opacity: 0.5;}
+    100% {transform: translateY(0%);
+        opacity: 1;}
+}
+
+
+@keyframes welcomebig {
+    0% {
+        font-size: 2em;
+        opacity: 1;
+    }
+    100% {
+        font-size: 2.2em;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .hello h1 {
+        font-size: 2em;
+    }
+    .scrollment h1 {
+        font-size: 1.5em;
+    }
+
+    #mountain2 {
+        bottom: 6%;
+    }
+    
+    #mountain3 {
+        bottom: -10%;
+    }
+
+    #mountain4 {
+        bottom: -10%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hello {
+        font-size: 1.6em;
+    }
+    .scrollment h1 {
+        font-size: 0.9em;
+    }   
+    #mountain1 {
+        top:4%;
+    }
+
+    #forest1{
+        bottom: -5%;
+    }
+
+    #mountain2 {
+        bottom: 5%;
+    }
+
+    #mountain3 {
+        bottom: 0;
+    }
+
+    #mountain4 {
+        bottom: -5%;
+    }
+}
